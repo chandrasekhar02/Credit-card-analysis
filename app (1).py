@@ -66,7 +66,7 @@ flag_score = (
     (cash_pct >= np.percentile([cash_pct], 75) if False else (cash_pct >= 50))*1 +  # approximate check
     (abs(spend_chg) > 20)*1
 )
-# (Above: cash threshold simplified; if you have training data, compute exact quartiles once and hardcode)
+
 
 st.metric("Flag Score", int(flag_score))
 
